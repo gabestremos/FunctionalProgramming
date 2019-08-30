@@ -15,10 +15,10 @@ import java.util.stream.Stream;
 public class FunctionalProgramming {
 private static DecimalFormat decimalFormat=new DecimalFormat("#.##");
 
-    static void printNameMostItemSold(String path) throws IOException {
-        Stream<String> stream= Files.lines(Path.of("branches",path+".csv"));
-        Set<Item> itemSet=stream.map(e->e.split(","))
-                .map(Main::mapToModel)
+     static void printNameMostItemSold(String path) throws IOException {
+
+        Stream<String> stream= Files.lines(Path.of("branches",path+".csv")); Set<Item> itemSet=stream.map(e->e.split(","))
+                .map(FunctionalProgramming::mapToModel)
                 .collect(Collectors.toSet());
         Map<String,Integer> nameMostItems=itemSet.stream()
                 .collect(Collectors.groupingBy(Item::getItemName,Collectors.summingInt(Item::getUnitSold)));
@@ -26,9 +26,9 @@ private static DecimalFormat decimalFormat=new DecimalFormat("#.##");
         System.out.println("The most item sold in "+path.toUpperCase()+": "+item);
     }
 
-    static void printMonthMostItemSold(Stream<String> streams) {
+     static void printMonthMostItemSold(Stream<String> streams) {
         Set<Item> itemSet=streams.map(e->e.split(","))
-                .map(Main::mapToModel)
+                .map(FunctionalProgramming::mapToModel)
                 .collect(Collectors.toSet());
         Map<String,Integer> monthMostItems=itemSet.stream()
                 .collect(Collectors.groupingBy(Item::getOrderDate,Collectors.summingInt(Item::getUnitSold)));
@@ -39,7 +39,7 @@ private static DecimalFormat decimalFormat=new DecimalFormat("#.##");
      static void printMostSoldItem2012(Stream<String> streams) {
         Set<Item> itemSet=streams.map(e->e.split(","))
                 .filter(w->w[1].contains("2012"))
-                .map(Main::mapToModel)
+                .map(FunctionalProgramming::mapToModel)
                 .collect(Collectors.toSet());
         Map<String,Integer> mostItem2012=itemSet.stream()
                 .collect(Collectors.groupingBy(Item::getItemName,Collectors.summingInt(Item::getUnitSold)));
@@ -50,7 +50,7 @@ private static DecimalFormat decimalFormat=new DecimalFormat("#.##");
      static void printMonthFruitsAreSoldMost(Stream<String> streams) {
         Set<Item> itemSet=streams.map(e->e.split(","))
                 .filter(w->w[0].equals("Fruits"))
-                .map(Main::mapToModel)
+                .map(FunctionalProgramming::mapToModel)
                 .collect(Collectors.toSet());
         Map<String, Integer> fruit=itemSet.stream()
                 .collect(Collectors.groupingBy((Item::getOrderDate),Collectors.summingInt(Item::getUnitSold)));
@@ -100,7 +100,7 @@ private static DecimalFormat decimalFormat=new DecimalFormat("#.##");
             return Stream.empty();
         }
     }
-    static Item mapToModel(String[] e){
+     static Item mapToModel(String[] e){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
         Item item= new Item();
         item.setItemName(e[0]);
