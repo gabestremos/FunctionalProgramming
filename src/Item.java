@@ -16,7 +16,6 @@ public class Item extends Main{
         this.itemName = itemName;
     }
 
-
     public String getOrderDate() {
         DateTimeFormatter dateFormat=DateTimeFormatter.ofPattern("MMMM");
         String formattedDate=dateFormat.format(orderDate);
