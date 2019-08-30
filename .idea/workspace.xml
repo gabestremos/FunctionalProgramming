@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fb6790fc-0bbf-40fc-93b5-4ec0b522c7ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Stream/FunctionalProgramming.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Stream/FunctionalProgramming.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FunctionalProgramming.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FunctionalProgramming.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +81,8 @@
       <workItem from="1567040862525" duration="14056000" />
       <workItem from="1567130674879" duration="110000" />
       <workItem from="1567145529471" duration="1125000" />
-      <workItem from="1567146933979" duration="245000" />
+      <workItem from="1567146933979" duration="788000" />
+      <workItem from="1567148060008" duration="712000" />
     </task>
     <servers />
   </component>
