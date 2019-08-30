@@ -47,7 +47,7 @@ private static DecimalFormat decimalFormat=new DecimalFormat("#.##");
         System.out.println("\nThe most item sold in 2012 was: "+item);
     }
 
-    public static void printMonthFruitsAreSoldMost(Stream<String> streams) {
+     static void printMonthFruitsAreSoldMost(Stream<String> streams) {
         Set<Item> itemSet=streams.map(e->e.split(","))
                 .filter(w->w[0].equals("Fruits"))
                 .map(Main::mapToModel)
