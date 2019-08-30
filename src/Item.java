@@ -1,6 +1,4 @@
 import java.math.BigDecimal;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -9,12 +7,6 @@ public class Item extends Main{
     private LocalDate orderDate;
     private int unitSold;
     private BigDecimal unitPrice;
-//    public Item(String itemName, LocalDate orderDate, int unitSold, BigDecimal unitPrice) {
-//        this.itemName = itemName;
-//        this.orderDate = orderDate;
-//        this.unitSold = unitSold;
-//        this.unitPrice = unitPrice;
-//    }
 
     public String getItemName() {
         return itemName;
